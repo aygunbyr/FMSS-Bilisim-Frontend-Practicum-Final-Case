@@ -1,0 +1,33 @@
+.footer {
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+}
+
+.logoContainer {
+  display: flex;
+  gap: 20px;
+}
+
+.footer a {
+  color: #fff;
+}
+
+.facebook:hover {
+  color: #4267b2;
+}
+
+.instagram:hover {
+  color: #d62976;
+}
+
+.twitter:hover {
+  color: #1da1f2;
+}
+
+.youtube:hover {
+  color: #ff0000;
+}

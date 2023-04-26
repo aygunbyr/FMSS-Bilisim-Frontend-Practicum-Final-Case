@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Ropa+Sans&display=swap");
+
+.header {
+  padding: 20px;
+  padding-bottom: 0;
+  background-color: #000;
+  background-image: url("../assets/navigation_stars@2x-815223a7aade.jpg");
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: 1px solid gray;
+}
+
+.logoContainer {
+  margin: 0 auto;
+  margin-top: -20px;
+}
+
+.logo {
+  height: 200px;
+  filter: brightness(0) invert(1);
+}
+
+.navbar {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Ropa Sans", sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.navList {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  margin-bottom: 10px;
+}
+
+.navList li a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.navList a:hover {
+  color: yellow;
+  border-bottom: 2px solid #ffe81f;
+}
