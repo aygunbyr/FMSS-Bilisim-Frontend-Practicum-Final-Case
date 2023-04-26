@@ -26,15 +26,17 @@ const SwapiProvider = ({ children }: Props) => {
   const [starships, setStarships] = useState<Starship[]>([])
   const [characters, setCharacters] = useState<Character[]>([])
 
-  ;(async () => {
-    const { results: fstarships } = await fetchStarships(1)
+  useEffect(() => {
+    ;(async () => {
+      const { results: fstarships } = await fetchStarships(1)
 
-    setStarships(fstarships)
+      setStarships(fstarships)
 
-    const { results: fcharacters } = await fetchPeople(1)
+      const { results: fcharacters } = await fetchPeople(1)
 
-    setCharacters(fcharacters)
-  })()
+      setCharacters(fcharacters)
+    })()
+  }, [])
 
   const values: ProviderValues = {
     starships,
