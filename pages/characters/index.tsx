@@ -1,7 +1,14 @@
-import React from "react";
+import { useSwapi } from '@/contexts/SwapiContext'
 
 function CharactersHome() {
-  return <div>Characters Home</div>;
+  const swapi = useSwapi()
+
+  return (
+    <div>
+      {/* Characters Home */}
+      {JSON.stringify(swapi?.characters)}
+    </div>
+  )
 }
 
-export default CharactersHome;
+export default CharactersHome

@@ -1,7 +1,14 @@
-import React from "react";
+import { useSwapi } from '@/contexts/SwapiContext'
 
 function StarshipsHome() {
-  return <div>Starships Home</div>;
+  const swapi = useSwapi()
+
+  return (
+    <div>
+      {/* Starships Home */}
+      {JSON.stringify(swapi?.starships)}
+    </div>
+  )
 }
 
-export default StarshipsHome;
+export default StarshipsHome
