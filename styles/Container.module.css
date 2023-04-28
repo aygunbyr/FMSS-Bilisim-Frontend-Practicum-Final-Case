@@ -18,7 +18,6 @@
   flex-direction: column;
   margin-bottom: 20px;
   margin-right: 20px;
-  align-items: stretch;
   align-self: center;
   justify-self: center;
   background-color: #222;
@@ -98,4 +97,38 @@
 
 .about {
   font-size: 20px;
+}
+
+.filterContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  /* border: 2px solid red; */
+}
+
+.filterInput {
+  margin-left: auto;
+  margin-right: auto;
+  height: 30px;
+  width: 200px;
+  font-size: 24px;
+  padding: 4px;
+  background-color: #334e30;
+  border: none;
+  border-radius: 5px;
+}
+
+.filterInput:focus {
+  outline: none;
+}
+
+.btnSubmit {
+  margin-left: 10px;
+  height: 32px;
+  font-size: 24px;
+  padding: 2px;
+  background-color: #2e557c;
+  color: #ad7d37;
+  border: none;
+  border-radius: 5px;
 }

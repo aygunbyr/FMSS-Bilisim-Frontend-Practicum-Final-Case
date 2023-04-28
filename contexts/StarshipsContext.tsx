@@ -1,11 +1,21 @@
-import { createContext, useContext, useEffect, useState } from 'react'
+import {
+  createContext,
+  useContext,
+  useEffect,
+  useState,
+  Dispatch,
+  SetStateAction,
+} from 'react'
 import { fetchStarships } from '@/services/swapi'
 import { Starship } from '@/types/starship'
 
 type ProviderValues = {
   starships: Starship[]
+  filtered: Starship[]
   starshipCount: number
+  filterText: string
   loadMoreStarships: () => void
+  setFilterText: Dispatch<SetStateAction<string>>
 }
 
 const StarshipsContext = createContext<ProviderValues | null>(null)
@@ -18,6 +28,8 @@ const StarshipsProvider = ({ children }: StarshipsProviderProps) => {
   const [starships, setStarships] = useState<Starship[]>([])
   const [starshipCount, setStarshipCount] = useState<number>(0)
   const [starshipPage, setStarshipPage] = useState<number>(1)
+  const [filtered, setFiltered] = useState<Starship[]>([])
+  const [filterText, setFilterText] = useState<string>('')
 
   useEffect(() => {
     const fetchData = async () => {
@@ -25,9 +37,19 @@ const StarshipsProvider = ({ children }: StarshipsProviderProps) => {
         await fetchStarships(1)
       setStarships(fetchedStarships)
       setStarshipCount(fetchedStarshipCount - fetchedStarships.length)
+      setFiltered(fetchedStarships)
     }
     fetchData()
   }, [])
+
+  useEffect(() => {
+    const filteredStarships = starships.filter(
+      ({ name, model }) =>
+        name.includes(filterText) || model.includes(filterText)
+    )
+
+    setFiltered(filteredStarships)
+  }, [filterText, starships])
 
   const loadMoreStarships = async () => {
     if (starshipCount === 0) {
@@ -42,8 +64,11 @@ const StarshipsProvider = ({ children }: StarshipsProviderProps) => {
 
   const values: ProviderValues = {
     starships,
+    filtered,
     starshipCount,
+    filterText,
     loadMoreStarships,
+    setFilterText,
   }
 
   return (
@@ -56,7 +81,7 @@ const StarshipsProvider = ({ children }: StarshipsProviderProps) => {
 const useStarships = () => {
   const context = useContext(StarshipsContext)
   if (context === undefined) {
-    throw new Error('useStarships must be used within a SwapiProvider')
+    throw new Error('useStarships must be used within a StarshipsProvider')
   }
   return context
 }
