@@ -1,16 +1,16 @@
 import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
 import Layout from '@/components/Layout'
-import { SwapiProvider } from '@/contexts/SwapiContext'
+import { StarshipsProvider } from '@/contexts/StarshipsContext'
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
-      <SwapiProvider>
+      <StarshipsProvider>
         <Layout>
           <Component {...pageProps} />
         </Layout>
-      </SwapiProvider>
+      </StarshipsProvider>
     </>
   )
 }

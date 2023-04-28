@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Ropa+Sans&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Ropa+Sans&display=swap');
 
 .header {
   padding: 20px;
   padding-bottom: 0;
   background-color: #000;
-  background-image: url("../assets/navigation_stars@2x-815223a7aade.jpg");
+  background-image: url('../assets/navigation_stars@2x-815223a7aade.jpg');
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12,7 +12,8 @@
 }
 
 .logoContainer {
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: -20px;
 }
 
@@ -22,11 +23,12 @@
 }
 
 .navbar {
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Ropa Sans", sans-serif;
+  font-family: 'Ropa Sans', sans-serif;
   font-weight: bold;
   letter-spacing: 1px;
 }
