@@ -10,8 +10,10 @@ type Props = {
 function Layout({ children }: Props) {
   return (
     <div className={styles.layout}>
-      <Header />
-      <Container>{children}</Container>
+      <div id="wrapper">
+        <Header />
+        <Container>{children}</Container>
+      </div>
       <Footer />
     </div>
   )

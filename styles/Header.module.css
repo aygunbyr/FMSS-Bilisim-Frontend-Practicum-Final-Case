@@ -4,7 +4,7 @@
   padding: 20px;
   padding-bottom: 0;
   background-color: #000;
-  background-image: url('../assets/navigation_stars@2x-815223a7aade.jpg');
+  background-image: url('../public/assets/navigation_stars@2x-815223a7aade.jpg');
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -41,12 +41,12 @@
 }
 
 .navList li a {
-  color: white;
+  color: #ad7d37;
   text-decoration: none;
   margin-left: 20px;
 }
 
-.navList a:hover {
-  color: yellow;
-  border-bottom: 2px solid #ffe81f;
+.navList li a:hover {
+  color: #fff;
+  border-bottom: 2px solid #fff;
 }

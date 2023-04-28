@@ -1,25 +1,26 @@
 import Link from 'next/link'
+import Logo from '@/assets/Star_Wars-Logo.wine.png'
 import styles from '@/styles/Header.module.css'
+import Image from 'next/image'
 
 function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.logoContainer}>
         <Link href="/">
-          <img
+          <Image
             className={styles.logo}
-            src="https://download.logo.wine/logo/Star_Wars/Star_Wars-Logo.wine.png"
-            alt=""
+            src="/assets/Star_Wars-Logo.wine.png"
+            alt="Star Wars Logo"
+            height={200}
+            width={300}
           />
         </Link>
       </div>
       <nav className={styles.navbar}>
         <ul className={styles.navList}>
           <li>
-            <Link href="/">HOME</Link>
-          </li>
-          <li>
-            <Link href="/starships">STARSHIPS</Link>
+            <Link href="/">STARSHIPS</Link>
           </li>
           <li>
             <Link href="/characters">CHARACTERS</Link>
