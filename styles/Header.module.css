@@ -4,7 +4,7 @@
   padding: 20px;
   padding-bottom: 0;
   background-color: #000;
-  background-image: url('../public/assets/navigation_stars@2x-815223a7aade.jpg');
+  background-image: url('/assets/navigation_stars@2x-815223a7aade.jpg');
   display: flex;
   flex-direction: column;
   justify-content: center;
