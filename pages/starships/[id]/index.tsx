@@ -1,8 +1,11 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { fetchStarships } from '@/services/swapi'
+import { BiArrowBack } from 'react-icons/bi'
 import { Starship } from '@/types/starship'
 import { Starships } from '@/data/Starships'
+import Images from '@/data/Image.json'
+import styles from '@/styles/StarshipDetail.module.css'
 
 type StarshipDetailProps = {
   data: Starship[]
@@ -15,13 +18,53 @@ function StarshipDetail({ data }: StarshipDetailProps) {
   // @ts-ignore
   const starship = data[parseInt(id)]
 
+  // @ts-ignore
+  const image = Images[parseInt(id)]?.img
+
   return (
-    <div>
-      <Link href="/">Back to Starships (sola yaslanacak)</Link>
-      Starship Detail
-      <h1>{starship.name}</h1>
-    </div>
+    <>
+      <div className={styles.back}>
+        <Link href="/">
+          <BiArrowBack /> Back to Starships
+        </Link>
+      </div>
+      {!starship && <div>Loading...</div>}
+      {starship && (
+        <>
+          <div className={styles.photoGrid}>
+            <Image
+              className={styles.image}
+              src={image}
+              width="800"
+              height="450"
+              alt={`Image: ${starship?.name}`}
+            />
+          </div>
+          <div className={styles.title}>
+            <h1>{starship?.name}</h1>
+          </div>
+          <div className={styles.details}>
+            <p>Passengers: {starship?.passengers}</p>
+            <p>Max Atmosphering Speed: {starship?.max_atmosphering_speed}</p>
+            <p>Manufacturer: {starship?.manufacturer}</p>
+            <p>Crew: {starship?.crew}</p>
+            <p>Cargo Capacity: {starship?.cargo_capacity}</p>
+          </div>
+        </>
+      )}
+    </>
   )
+
+  // @ts-ignore
+  // const starship = data[parseInt(id)]
+
+  // return (
+  //   <div>
+  //     <Link href="/">Back to Starships (sola yaslanacak)</Link>
+  //     Starship Detail
+  //     <h1>{starship.name}</h1>
+  //   </div>
+  // )
 }
 
 export async function getStaticProps() {
@@ -34,7 +77,7 @@ export async function getStaticProps() {
 
 export async function getStaticPaths() {
   const paths = []
-  for (let i = 0; i < 36; i++) {
+  for (let i = 0; i < Starships.length; i++) {
     paths.push({ params: { id: i.toString() } })
   }
 

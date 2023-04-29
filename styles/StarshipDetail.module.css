@@ -1,0 +1,42 @@
+.back {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.back a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 24px;
+}
+
+.title {
+  margin-bottom: 10px;
+}
+
+.details {
+  line-height: 24px;
+}
+
+.details p {
+  font-size: 20px;
+}
+
+.photoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+  margin-bottom: 20px;
+}
+
+.image {
+  object-fit: cover;
+  max-width: 100%;
+}
+
+@media only screen and (min-width: 1024px) {
+  .photoGrid {
+    display: grid;
+    grid-template-columns: 800px;
+  }
+}
