@@ -25,9 +25,6 @@ function Header() {
           <li>
             <Link href="/characters">CHARACTERS</Link>
           </li>
-          <li>
-            <Link href="/about">ABOUT</Link>
-          </li>
         </ul>
       </nav>
     </header>
