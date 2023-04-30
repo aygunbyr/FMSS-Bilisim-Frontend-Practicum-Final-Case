@@ -32,6 +32,7 @@ const CharactersProvider = ({ children }: CharactersProviderProps) => {
   const [filterText, setFilterText] = useState<string>('')
 
   useEffect(() => {
+    console.log('Characters context mount edildi')
     const fetchData = async () => {
       const { results: fetchedCharacters, count: fetchedCharacterCount } =
         await fetchCharacters(1)
@@ -77,12 +78,6 @@ const CharactersProvider = ({ children }: CharactersProviderProps) => {
   )
 }
 
-const useCharacters = () => {
-  const context = useContext(CharactersContext)
-  if (context === undefined) {
-    throw new Error('useCharacters must be used within a CharactersProvider')
-  }
-  return context
-}
+const useCharacters = () => useContext(CharactersContext)
 
 export { CharactersProvider, useCharacters }

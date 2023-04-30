@@ -78,12 +78,5 @@ const StarshipsProvider = ({ children }: StarshipsProviderProps) => {
   )
 }
 
-const useStarships = () => {
-  const context = useContext(StarshipsContext)
-  if (context === undefined) {
-    throw new Error('useStarships must be used within a StarshipsProvider')
-  }
-  return context
-}
-
+const useStarships = () => useContext(StarshipsContext)
 export { StarshipsProvider, useStarships }
