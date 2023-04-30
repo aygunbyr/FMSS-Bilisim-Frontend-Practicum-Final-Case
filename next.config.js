@@ -12,6 +12,7 @@ const nextConfig = {
       'media.sketchfab.com',
       'i.pinimg.com',
       'i.ebayimg.com',
+      'vignette.wikia.nocookie.net',
     ],
   },
 }

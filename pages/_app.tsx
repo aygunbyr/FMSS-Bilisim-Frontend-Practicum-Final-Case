@@ -4,6 +4,7 @@ import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
 import Layout from '@/components/Layout'
 import { StarshipsProvider } from '@/contexts/StarshipsContext'
+import { CharactersProvider } from '@/contexts/CharactersContext'
 import Loader from '@/components/Loader'
 import Head from 'next/head'
 
@@ -33,10 +34,12 @@ export default function App({ Component, pageProps }: AppProps) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <StarshipsProvider>
-        <Layout>
-          {isLoading && <Loader />}
-          <Component {...pageProps} />
-        </Layout>
+        <CharactersProvider>
+          <Layout>
+            {isLoading && <Loader />}
+            <Component {...pageProps} />
+          </Layout>
+        </CharactersProvider>
       </StarshipsProvider>
     </>
   )
