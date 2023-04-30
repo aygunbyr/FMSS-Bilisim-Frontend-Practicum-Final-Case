@@ -6,7 +6,7 @@ export const fetchPlanets = async (page: number) => {
   return data;
 }
 
-export const fetchPeople = async (page: number) => {
+export const fetchCharacters = async (page: number) => {
   const {data} = await axios.get(`https://swapi.dev/api/people?page=${page}`)
 
   return data;
