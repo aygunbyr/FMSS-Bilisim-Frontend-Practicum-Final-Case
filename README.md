@@ -1,12 +1,12 @@
 # Star Wars Clone
 
-This project is developed for Patika.dev FMSS Bilişim Front-end Practicum Final Case assignment.
+This project is developed by myself for the Patika.dev FMSS Bilişim Front-end Practicum Final Case assignment.
 
-I aimed to develop a production-grade application so I developed this project using Next.js and Typescript.
+I aimed to develop a production-grade application therefore I developed this project using Next.js and Typescript.
 
 Next/Image optimizes images with lazy loading.
 
-All module css files in `styles` folder.
+All module css files are in `styles` folder.
 
 I used SWAPI for Star Wars data. SWAPI does not provide any image because of that I used `data/Image.json` file that holds Image URL data.
 
