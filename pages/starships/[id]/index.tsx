@@ -54,17 +54,6 @@ function StarshipDetail({ data }: StarshipDetailProps) {
       )}
     </>
   )
-
-  // @ts-ignore
-  // const starship = data[parseInt(id)]
-
-  // return (
-  //   <div>
-  //     <Link href="/">Back to Starships (sola yaslanacak)</Link>
-  //     Starship Detail
-  //     <h1>{starship.name}</h1>
-  //   </div>
-  // )
 }
 
 export async function getStaticProps() {

@@ -32,7 +32,6 @@ const CharactersProvider = ({ children }: CharactersProviderProps) => {
   const [filterText, setFilterText] = useState<string>('')
 
   useEffect(() => {
-    console.log('Characters context mount edildi')
     const fetchData = async () => {
       const { results: fetchedCharacters, count: fetchedCharacterCount } =
         await fetchCharacters(1)

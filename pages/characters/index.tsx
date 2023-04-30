@@ -9,8 +9,6 @@ import styles from '@/styles/Characters.module.css'
 function CharactersHome() {
   const context = useCharacters()
 
-  console.log(JSON.stringify(context?.filtered))
-
   const [filter, setFilter] = useState('')
 
   const handleChange = (event: React.FormEvent<HTMLInputElement>): void => {
