@@ -61,8 +61,12 @@ function StarshipsHome() {
             Images.find((image) => image.name === starship.name)?.img ??
             '/assets/no-image.jpg'
 
+          const index = Images.findIndex(
+            (image) => image.name === starship.name
+          )
+
           return (
-            <Link className={styles.link} href={`starships/${key}`} key={key}>
+            <Link className={styles.link} href={`starships/${index}`} key={key}>
               <div className={styles.item}>
                 <Image
                   className={styles.image}

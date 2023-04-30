@@ -58,8 +58,16 @@ function CharactersHome() {
             Avatars.find((image) => image.name === character.name)?.img ||
             '/assets/no-image.jpg'
 
+          const index = Avatars.findIndex(
+            (image) => image.name === character.name
+          )
+
           return (
-            <Link className={styles.link} href={`characters/${key}`} key={key}>
+            <Link
+              className={styles.link}
+              href={`characters/${index}`}
+              key={key}
+            >
               <div className={styles.item}>
                 <Image
                   className={styles.image}
