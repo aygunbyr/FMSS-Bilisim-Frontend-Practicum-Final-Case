@@ -45,7 +45,7 @@ const CharactersProvider = ({ children }: CharactersProviderProps) => {
 
   useEffect(() => {
     const filteredCharacters = characters.filter(({ name }) =>
-      name.includes(filterText)
+      name.toLowerCase().includes(filterText.toLowerCase())
     )
 
     setFiltered(filteredCharacters)

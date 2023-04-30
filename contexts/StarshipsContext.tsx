@@ -43,9 +43,12 @@ const StarshipsProvider = ({ children }: StarshipsProviderProps) => {
   }, [])
 
   useEffect(() => {
+    const filterTextLC = filterText.toLowerCase()
+
     const filteredStarships = starships.filter(
       ({ name, model }) =>
-        name.includes(filterText) || model.includes(filterText)
+        name.toLowerCase().includes(filterTextLC) ||
+        model.toLowerCase().includes(filterTextLC)
     )
 
     setFiltered(filteredStarships)

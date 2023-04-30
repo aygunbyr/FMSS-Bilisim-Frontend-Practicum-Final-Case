@@ -55,18 +55,22 @@ function CharactersHome() {
         </form>
       </div>
       <div className={styles.list}>
-        {context?.filtered?.map((starship: Character, key: number) => {
+        {context?.filtered?.map((character: Character, key: number) => {
+          const image =
+            Avatars.find((image) => image.name === character.name)?.img ||
+            '/assets/no-image.jpg'
+
           return (
             <Link className={styles.link} href={`characters/${key}`} key={key}>
               <div className={styles.item}>
                 <Image
                   className={styles.image}
-                  src={Avatars[key]}
+                  src={image}
                   alt="Character"
                   width="260"
                   height="300"
                 ></Image>
-                <span className={styles.title}>{starship.name}</span>
+                <span className={styles.title}>{character.name}</span>
               </div>
             </Link>
           )

@@ -57,21 +57,16 @@ function StarshipsHome() {
       </div>
       <div className={styles.list}>
         {context?.filtered?.map((starship: Starship, key: number) => {
-          if (
-            starship.name !== Images[key]?.name &&
-            context?.filtered?.length === context?.starships?.length
-          ) {
-            console.log(
-              `JSON Image #${key} is not corresponding to starship ${starship.name}`
-            )
-          }
+          const image =
+            Images.find((image) => image.name === starship.name)?.img ??
+            '/assets/no-image.jpg'
 
           return (
             <Link className={styles.link} href={`starships/${key}`} key={key}>
               <div className={styles.item}>
                 <Image
                   className={styles.image}
-                  src={Images[key]?.img}
+                  src={image}
                   alt="Starship"
                   width="260"
                   height="150"
