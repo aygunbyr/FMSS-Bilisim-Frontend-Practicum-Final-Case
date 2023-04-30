@@ -13,6 +13,7 @@ const nextConfig = {
       'i.pinimg.com',
       'i.ebayimg.com',
       'vignette.wikia.nocookie.net',
+      'static.wikia.nocookie.net',
     ],
   },
 }
