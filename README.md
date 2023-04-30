@@ -16,15 +16,15 @@ Layout is fully responsive and mobile compatible.
 
 ## Features
 
-- Listing sharships
-- Search among starships
-- Read details of a specific starship
-- Load more starships with a load more button
+- Listing sharships and characters
+- Search among starships and characters
+- Read details of a specific starship or character
+- Load more starships or characters with a load more button
 
 ## Used Libraries
 
 - React
-- Next.js, Next/Router
+- Next.js
 - Axios
 - React Icons
 
@@ -58,7 +58,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-Static-site generation doesn't work on development mode, we generate starship detail pages as static html files.
+Static-site generation doesn't work on development mode, we generate detail pages as static html files.
 
 Install NPM packages
 
