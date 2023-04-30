@@ -41,12 +41,12 @@
 }
 
 .navList li a {
-  color: #ad7d37;
+  color: #dedde5;
   text-decoration: none;
   margin-left: 20px;
 }
 
 .navList li a:hover {
-  color: #fff;
-  border-bottom: 2px solid #fff;
+  color: #2c8bcf;
+  border-bottom: 2px solid #2c8bcf;
 }
