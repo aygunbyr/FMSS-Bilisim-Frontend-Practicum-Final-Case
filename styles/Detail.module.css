@@ -23,6 +23,11 @@
   font-size: 20px;
 }
 
+.details a {
+  color: #2c8bcf;
+  text-decoration: none;
+}
+
 .photoGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));

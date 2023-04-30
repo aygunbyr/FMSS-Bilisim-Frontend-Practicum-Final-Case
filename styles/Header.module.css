@@ -29,8 +29,9 @@
   justify-content: center;
   align-items: center;
   font-family: 'Ropa Sans', sans-serif;
+  font-size: 24px;
   font-weight: bold;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 
 .navList {
@@ -43,7 +44,7 @@
 .navList li a {
   color: #dedde5;
   text-decoration: none;
-  margin-left: 20px;
+  margin-left: 30px;
 }
 
 .navList li a:hover {

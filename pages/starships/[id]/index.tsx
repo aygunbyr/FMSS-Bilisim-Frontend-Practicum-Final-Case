@@ -5,7 +5,7 @@ import { BiArrowBack } from 'react-icons/bi'
 import { Starship } from '@/types/starship'
 import { Starships } from '@/data/Starships'
 import Images from '@/data/Image.json'
-import styles from '@/styles/StarshipDetail.module.css'
+import styles from '@/styles/Detail.module.css'
 
 type StarshipDetailProps = {
   data: Starship[]
