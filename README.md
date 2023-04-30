@@ -30,6 +30,32 @@ Layout is fully responsive and mobile compatible.
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Screenshots
+
+### Starships
+
+![Starships](./screenshots/starships-index.png)
+
+### Starships: Filtered Results
+
+![Starships: Filtered Results](./screenshots/starships-filtered.png)
+
+### Starships: Detail Page
+
+![Starships: Detail Page](./screenshots/starships-detail.png)
+
+### Characters
+
+![Characters](./screenshots/characters-index.png)
+
+### Characters: Filtered Results
+
+![Characters: Filtered Results](./screenshots/characters-filtered.png)
+
+### Characters: Detail Page
+
+![Characters: Detail Page](./screenshots/characters-detail.png)
+
 ## Getting Started
 
 Static-site generation doesn't work on development mode, we generate starship detail pages as static html files.
